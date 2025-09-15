@@ -17,9 +17,9 @@ import com.example.demo.DTO.PaymentResponse;
 public class ExternalServiceSimulator {
     
     
-    @PayloadRoot(namespace = "http://payment", localPart = "PaymentRequest")
+    @PayloadRoot(namespace = "http://FakeBank/payment", localPart = "PaymentRequest")
     @ResponsePayload
-    
+
     public PaymentResponse processPayment(@RequestPayload  PaymentRequest request) throws Exception {
         PaymentResponse response = new PaymentResponse();
         

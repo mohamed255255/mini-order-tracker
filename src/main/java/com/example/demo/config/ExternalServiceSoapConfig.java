@@ -11,7 +11,7 @@ import org.springframework.xml.xsd.XsdSchema;
 ///specifying the config for the (clients) who want to link with my service 
 @Configuration
 @EnableWs
-public class SoapConfig {
+public class ExternalServiceSoapConfig {
     /// .WSDL is an document or file.WSDL that is sent in this URL created from the XSD
     ///  and more data like port and namespace are added to it it 
     @Bean
@@ -19,7 +19,7 @@ public class SoapConfig {
         DefaultWsdl11Definition wsdlDefinition = new DefaultWsdl11Definition();
         wsdlDefinition.setPortTypeName("paymentServicePort");
         wsdlDefinition.setLocationUri("/ws");
-        wsdlDefinition.setTargetNamespace("http://payment");
+        wsdlDefinition.setTargetNamespace("http://bank/payment");
         wsdlDefinition.setSchema(orderServiceSchema());
         return wsdlDefinition;
     }

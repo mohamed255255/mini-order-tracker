@@ -5,7 +5,7 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "PaymentRequest", namespace = "http://payment")
+@XmlRootElement(name = "PaymentRequest", namespace = "http://FakeBank/payment")
 @XmlAccessorType(XmlAccessType.FIELD)
 
 public class PaymentRequest {
