@@ -1,12 +1,12 @@
 package com.example.demo.Model;
 import java.util.List;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 
 @Entity
@@ -29,6 +29,16 @@ public class Order {
     /// cascade happens at the parent part of the relation , what happen to the child when the parent is affected
     @OneToMany(mappedBy = "order" , cascade = jakarta.persistence.CascadeType.PERSIST)
     private List<Payment> payments ;
+
+     //constructors
+    public Order() {}
+
+    public Order(String description, Double price, String status, int total_amount) {
+        this.description = description;
+        this.price = price;
+        this.status = status;
+        this.total_amount = total_amount;
+    }
 
     public Long getId() {
         return id;
@@ -56,6 +66,9 @@ public class Order {
     }
     public int getTotal_amount() {
         return total_amount;
+    }
+    public void setTotal_amount(int total_amount) {
+        this.total_amount = total_amount;
     }
 
 
