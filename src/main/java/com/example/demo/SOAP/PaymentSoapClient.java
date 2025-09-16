@@ -1,8 +1,7 @@
-package com.example.demo.SOAP;
+/*package com.example.demo.SOAP;
 
 import com.example.demo.DTO.PaymentRequest;
 import com.example.demo.DTO.PaymentResponse;
-import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.stereotype.Component;
 import org.springframework.ws.client.core.WebServiceTemplate;
 
@@ -19,7 +18,7 @@ public class PaymentSoapClient {
         this.webServiceTemplate = webServiceTemplate;
     }
 
-    
+
     public PaymentResponse createPaymentRequest(Long orderId, Double amount, String method) throws Exception {
 
         PaymentRequest request = new PaymentRequest();
@@ -33,6 +32,9 @@ public class PaymentSoapClient {
         request.setPaymentDate(paymentDate);
 
         // Call the remote SOAP service and cast the response
+        // marshalling is the step where Spring turns your Java object 
+        //into the XML payload that goes inside the SOAP envelope
+
         return (PaymentResponse) webServiceTemplate.marshalSendAndReceive(request);
     }
-}
+}*/

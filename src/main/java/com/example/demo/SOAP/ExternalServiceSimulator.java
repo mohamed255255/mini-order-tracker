@@ -1,4 +1,5 @@
-package com.example.demo.SOAP;
+
+/* package com.example.demo.SOAP;
 
 import java.util.GregorianCalendar;
 
@@ -33,3 +34,4 @@ public class ExternalServiceSimulator {
         return response;
     }
 }
+*/
